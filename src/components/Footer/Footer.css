@@ -1,0 +1,69 @@
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 2%;
+    max-width: 100%;
+    animation: fadeInFromBottom 0.8s ease-in-out; 
+    color: #6C6E6F;
+    background-color: #f7f7f7;
+}
+
+.footer__privacy {
+    color: var(--color-blue);
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%;
+    gap: 15px;
+}
+
+.footer__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact__phones,
+.contact__messengers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phones,
+.messengers {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .footer__content,
+    .footer__contact {
+        justify-content: flex-start;
+    }
+
+    .contact__subtitle {
+        align-self: start;
+    }
+}

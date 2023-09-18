@@ -1,0 +1,369 @@
+.bottom-order-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+
+    min-width: 333px !important;
+    width: auto !important;
+    border-radius: 10px;
+    padding: 16px 26px;
+
+    background-color: rgba(227, 227, 227, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer__subtitle {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.offer__subtitle-text,
+.plus {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.plus {
+    color: var(--color-red);
+    font-weight: 900;
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.payment__title {
+    margin: 8px 0;
+}
+
+.payment_selector_field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.payment_title {
+    margin-left: 6px;
+}
+
+.custom-radio.selected {
+    border-color: #2eb92e !important;
+}
+
+.custom-radio {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    line-height: 1 !important;
+}
+
+.payment_selector_field > * {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.payment_selector {
+    font-size: 20px;
+    color: #45c716;
+}
+
+.checkmark {
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    height: 16px;
+    width: 16px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    padding: 6px !important;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px !important;
+}
+
+.selected i,
+.selected .payment_title {
+    visibility: visible;
+    font-weight: 700;
+}
+
+.fa-check::before {
+    content: "\f00c";
+    position: absolute;
+    left: -0.001px;
+    top: -0.001px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+
+    width: 100% !important;
+    margin-bottom: 30px;
+    gap: 1rem;
+}
+
+.price__title {
+    font-weight: 600;
+}
+
+.price__old .price__value,
+.price__old .price__currency {
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.price__new .price__value,
+.price__new .price__currency {
+    color: var(--color-black);
+    font-weight: 900;
+}
+
+.price__old .price__value {
+    font-size: 30px;
+    text-decoration: line-through;
+}
+
+.price__new .price__value {
+    font-size: 36px;
+}
+
+.price__new p {
+    margin-top: 5px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+    align-self: center;
+    gap: 11px;   
+}
+
+.input__name input,
+.input__phone-number .react-tel-input {
+    position: relative;
+    outline: 0;
+    -webkit-border-radius: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin: 16px 0;
+    padding: 0 20px;
+    background: var(--color-white);
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 11px;
+    z-index: 5;
+}
+
+.flag-dropdown {
+    right: auto;
+    left: 10px;
+    border: none !important;
+}
+
+.country-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 8px;
+    background: var(--color-white);
+}
+
+.react-tel-input .form-control {
+    width: 100% !important;
+    height: 95% !important;
+    border: none !important;
+    border-color: transparent !important;
+    background: var(--color-white);
+}
+
+.order__button {
+    border: 1px solid var(--color-black);
+    border-radius: 5px;
+    padding: 12px 24px;
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    height: 68px;
+    line-height: 1;
+    text-align: center;
+    font-family: 'AvenirNextCyr', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 0 0 0 rgba(89, 89, 89, 0.26);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.order__button:hover {
+    background-image: var(--gradient-violet-purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-image: var(--gradient-violet-purple) 2;
+    border-radius: 0 !important;
+}
+
+.lastpack__wrapper {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.lastpack_value {
+    background: var(--gradient-violet-purple);
+    color: var(--color-white);
+    border-radius: 5px;
+    padding: 3px 3px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-pulse {
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255);
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0 0 0 0 rgba(89, 89, 89, 0.26);
+    animation: pulse 1.75s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 30px rgba(209, 159, 98, 0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .order-screen {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-widget-wrapper {
+        position: relative;
+        max-width: 95% !important;
+        margin: 0 auto;
+        padding: 16px 0;
+    }
+
+    .inputs {
+        max-width: 60%;
+    }
+
+    .bottom-order-widget {
+        position: static;
+        margin: 32px 2% 0;
+        padding: 16px 26px;
+    }
+    
+    .input-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .input__name {
+        width: 100%;
+    }
+
+    .react-tel-input {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .offer__subtitle {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+}

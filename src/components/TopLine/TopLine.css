@@ -1,0 +1,44 @@
+.top-line {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-line__item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.top-line__item {
+    text-align: center;
+    font-size: 18px;
+}
+
+.top-line__item i {
+    font-size: 32px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.top-line-active {
+    animation: animationApear 1s ease-in-out forwards;
+}
+
+@keyframes animationApear {
+    0% {
+        transform: rotateX(180deg);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 2s ease;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .top-line__item {
+        flex-direction: column;
+        font-size: 14px !important;
+    }
+}

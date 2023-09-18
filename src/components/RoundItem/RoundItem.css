@@ -1,0 +1,43 @@
+.round-item {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    
+    border-radius: 50%;
+    padding: 6px;
+    margin-bottom: 16px;
+
+    background: var(--gradient-violet-purple);
+}
+
+.circle__img,
+.circle i {
+    border-radius: 50%;
+}
+
+.circle i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    height: 176px;
+    width: 176px;
+    font-size: 60px;
+    background: var(--color-white);
+}
+
+.round-item__description {
+    text-transform: uppercase;
+}

@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(227, 227, 227, 0.6);
+    z-index: 5;
+}
+
+.header__logo {
+    width: 50px;
+    cursor: pointer;
+}

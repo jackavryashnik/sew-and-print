@@ -1,0 +1,34 @@
+.invisible {
+    transform: translateX(-100%);
+}
+
+.order__items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.order__items-active {
+    animation: fadeInFromLeft 1s ease-in-out;
+}
+
+.order__item-active {
+    animation: fadeInFromLeft 1s ease-in-out forwards;
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .order__items {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+}

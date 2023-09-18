@@ -1,0 +1,29 @@
+.order-screen {
+    height: 810px ;
+
+    /* background-image: url(../../assets/img/theme/bg_footer.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bottom-order-widget-active {
+    animation: animationFromBottom 1s ease-in-out forwards;
+}
+
+@keyframes animationFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .order-screen {
+        padding: 16px 0;
+    }
+}
