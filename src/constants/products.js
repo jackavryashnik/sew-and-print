@@ -1,6 +1,32 @@
 import productsImages from '../assets/products';
 
 const products = {
+    machineryPreview: {
+        1: {
+            title: 'Промислові DTF лінії',
+            images: [productsImages.industrial_conveyor_2[2]],
+        },
+        2: {
+            title: 'Принтера для DTF друку формату А4+',
+            images: [productsImages.a4_1[2]],
+        },
+        3: {
+            title: 'Принтера для DTF друку формату А3+',
+            images: [productsImages.a3_3[0]],
+        },
+        4: {
+            title: 'Лінії для DTF друку на базі дороблених Epson A3+',
+            images: [productsImages.printerShaker_2[5]],
+        },
+        5: {
+            title: 'Шейкер DTF, лінія нанесення клею',
+            images: [productsImages.shaker_5[3]],
+        },
+        6: {
+            title: 'Сушка для DTF трансферів',
+            images: [productsImages.dayer_4[2]],
+        },
+    },
     machinery: {
         A4: {
             1: {

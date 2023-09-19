@@ -3,23 +3,22 @@ import { Card, List, Image } from 'antd';
 import './ProductsList.css';
 import products from '../../constants/products';
 import { Link } from 'react-router-dom';
+import { SectionTitle } from '../../components';
 
-export const ProductsList = ({ category, product }) => {
+export const ProductsList = ({ category, product, sectionTitle }) => {
   if (!products[category]) {
     return <List />;
   }
   
-  const productList = products?.[category]?.[product] || products?.[category];
+  const productList = Object.values(products?.[category]?.[product] || products?.[category]);
+  const path = (category === 'machineryPreview') ? 'machinery' : `${category}`;
   
-  if (!Array.isArray(productList)) {
-    return <List />;
-  }
-
-
   return (
     <div>
+      <SectionTitle startText={sectionTitle} />
       <List
         grid={{ gutter: 16, column: 4 }}
+        size={"small"}
         dataSource={productList}
         renderItem={(productItem, index) => (
           <List.Item key={index}>
@@ -28,9 +27,9 @@ export const ProductsList = ({ category, product }) => {
             >
               <Card.Meta
                 title={productItem.title}
-                description={`Ціна: ${productItem.price} грн`}
+                description={productItem.price ? `Ціна: ${productItem.price} грн` : ''}
               />
-              <Link to={`/product/${index}`}>Деталі</Link>
+              <Link to={`/${path}/${product}`}>Деталі</Link>
             </Card>
           </List.Item>
         )}

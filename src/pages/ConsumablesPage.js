@@ -4,8 +4,7 @@ import { ProductsList } from "../components/ProductsList/ProductsList"
 export const ConsumablesPage = () => {
   return (
     <>
-    <ProductsList  category="consumables"/>
-    <div>ConsumablesPage</div>
+    <ProductsList  category="consumables" sectionTitle="Витратні матеріали для DTF друку"/>
   </>
   )
 }

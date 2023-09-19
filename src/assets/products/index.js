@@ -214,9 +214,9 @@ import dayer_3_10 from "./machinery/transfers_dryer/3/4169062962_w640_h640_41690
 import dayer_4_1 from "./machinery/transfers_dryer/4/4169067158_w640_h640_4169067158.webp"
 import dayer_4_2 from "./machinery/transfers_dryer/4/4169067159_w640_h640_4169067159.webp"
 import dayer_4_3 from "./machinery/transfers_dryer/4/4169067160_w640_h640_4169067160.webp"
-import dayer_4_4 from "./machinery/transfers_dryer/4/4169067160_w640_h640_4169067160.webp"
-import dayer_4_5 from "./machinery/transfers_dryer/4/4169067161_w640_h640_4169067161.webp"
-import dayer_4_6 from "./machinery/transfers_dryer/4/4169067162_w640_h640_4169067162.webp"
+import dayer_4_4 from "./machinery/transfers_dryer/4/4169067161_w640_h640_4169067161.webp"
+import dayer_4_5 from "./machinery/transfers_dryer/4/4169067162_w640_h640_4169067162.webp"
+import dayer_4_6 from "./machinery/transfers_dryer/4/4169067163_w640_h640_4169067163.webp"
 import dayer_4_7 from "./machinery/transfers_dryer/4/4169067164_w640_h640_4169067164.webp"
 import dayer_4_8 from "./machinery/transfers_dryer/4/4169067165_w640_h640_4169067165.webp"
 

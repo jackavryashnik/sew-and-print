@@ -15,7 +15,7 @@ const Introdaction = () => {
 
     return (
         <div className="printers" id="printers">
-            <SectionTitle startText={"DFT принтери"} />
+            <SectionTitle startText={"DFT обладнання"} />
 
             <div className="printers__industrial">
                 <div className="product__img">
@@ -39,7 +39,7 @@ const Introdaction = () => {
                             Маленькі DTF принтери - це ідеальний вибір для тих, хто починає свій шлях у світі цифрового текстильного друку. Вони компактні, легкі у використанні та забезпечують високу якість друку на текстилі. Ці принтери чудово підходять для невеликих обсягів виробництва та надають можливість надрукувати власні дизайни на футболках, кепках та інших текстильних виробах вдома або в маленькому бізнесі.
                         </p>
                         <div className="products__catalog">
-                            <Link to="/printers">
+                            <Link to="/machinery">
                                 <button className="button">Каталог</button>
                             </Link>
                         </div>
