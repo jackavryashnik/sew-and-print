@@ -11,6 +11,7 @@ import { PrinterShakerPage } from "./PrinterShakerPage";
 import { DryerPage } from "./DryerPage";
 import { ConveyorPage } from "./ConveyorPage";
 import { ShakerPage } from "./ShakerPage";
+import { ProductPage } from "./ProductPage";
 
 const pages = {
     PrinterShakerPage,
@@ -26,6 +27,7 @@ const pages = {
     ShakerPage,
     DryerPage,
     ConveyorPage,
+    ProductPage,
 };
 
 export default pages;

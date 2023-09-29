@@ -4,7 +4,7 @@ import { ProductsList } from "../components/ProductsList/ProductsList"
 export const A4Page = () => {
   return (
     <>
-    <ProductsList category="machinery" product="A4" sectionTitle="Принтера для DTF друку формату А4+"/>
+    <ProductsList category="machinery" catalog="A4" sectionTitle="Принтера для DTF друку формату А4+"/>
     </>
   )
 }

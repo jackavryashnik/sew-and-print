@@ -11,19 +11,53 @@
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 20px 2%;
+    padding: 40px 20px 20px;
     max-width: 100%;
     animation: fadeInFromBottom 0.8s ease-in-out; 
-    color: #6C6E6F;
-    background-color: #f7f7f7;
+    background-color: var(--color-gray);
+    color: #f7f7f7;
+}
+
+.footer p i {
+    font-size: 16px;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.footer__logo {
+    display: flex;
+    gap: .5rem;
+}
+
+.footer__logo-img {
+    width: 60px;
 }
 
 .footer__privacy {
-    color: var(--color-blue);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.footer__privacy p {
+    display: inline;
     cursor: pointer;
-    align-self: flex-end;
+    color: var(--color-blue);
+}
+
+.footer__navbar a {
+    color: #f7f7f7;
+}
+
+.footer__navbar a:hover {
+    color: var(--color-blue);
 }
 
 .footer__content {
@@ -31,6 +65,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    width: 100%;
     max-width: 100%;
     gap: 15px;
 }
@@ -41,6 +76,10 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+.contact__subtitle {
+    align-self: start;
 }
 
 .contact__phones,
@@ -58,12 +97,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .footer__content,
-    .footer__contact {
-        justify-content: flex-start;
-    }
-
-    .contact__subtitle {
-        align-self: start;
+    .footer__navbar {
+        display: none;
     }
 }

@@ -1,9 +1,9 @@
 .order-screen {
-    height: 810px ;
+    display: flex;
+    justify-content: flex-end;
 
-    /* background-image: url(../../assets/img/theme/bg_footer.jpg); */
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../../assets/images/dtf-printer.png");
+    background-size: 100% 100%;
 }
 
 .bottom-order-widget-active {
@@ -19,11 +19,5 @@
     100% {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@media screen and (max-width: 200px) {
-    .order-screen {
-        padding: 16px 0;
     }
 }

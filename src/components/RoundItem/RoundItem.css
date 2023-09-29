@@ -18,7 +18,7 @@
     padding: 6px;
     margin-bottom: 16px;
 
-    background: var(--gradient-violet-purple);
+    background: var(--color-main-light);
 }
 
 .circle__img,
@@ -40,4 +40,11 @@
 
 .round-item__description {
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 400px) {
+    .circle i {
+        width: 150px;
+        height: 150px;
+    }
 }

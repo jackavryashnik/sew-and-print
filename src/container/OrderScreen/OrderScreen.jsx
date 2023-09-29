@@ -1,19 +1,13 @@
 import React from "react";
-import { useInView } from 'react-intersection-observer';
-import { BottomOrderWidget } from "../../components";
+import { OrderScreenWidget } from "../../components";
 import "./OrderScreen.css";
 
-const OrderScreen = ({ fetchedData }) => {    
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true,
-    })
-
+const OrderScreen = () => {    
     return (
-        <div ref={ref} className="order-screen section__padding" id="order">
-                <div className={`${inView ? 'bottom-order-widget-active' : ''}`}>
-                    <BottomOrderWidget fetchedData={fetchedData} />
-                </div>
+        <div className="order-screen section__padding" id="order">
+                <>
+                    <OrderScreenWidget />
+                </>
         </div>
     );
 };

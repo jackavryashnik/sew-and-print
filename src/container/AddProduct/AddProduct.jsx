@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useInView } from 'react-intersection-observer';
 import { SectionTitle } from "../../components";
 import images from "../../assets/images"
 import "./AddProduct.css";
 
 const AddProduct = () => {
     const {condiments} = images;
-    const { ref, inView } = useInView({
-        threshold: 0,
-        triggerOnce: true,
-    })
+
+    function scrollToTop() {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 0);
+    }
 
     return (
         <div className="add-product" id="add-product">
@@ -19,8 +20,8 @@ const AddProduct = () => {
             />
             <section className="add-product__content">
                 <div className="content__img">
-                    <img ref={ref}
-                    className={`content__img-img ${inView ? 'rollIn' : ''}`}
+                    <img
+                    className={`content__img-img`}
                     src={condiments}
                     alt="grape oil"/>
                 </div>
@@ -32,7 +33,7 @@ const AddProduct = () => {
                     </p>
                     
                     <div className="products__catalog">
-                            <Link to="/consumables">
+                            <Link onClick={scrollToTop} to="/consumables">
                             <button className="button">Детальніше</button>
                         </Link>
                     </div>

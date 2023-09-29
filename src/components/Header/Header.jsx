@@ -4,9 +4,15 @@ import "./Header.css"
 import { Link } from "react-router-dom";
 
 const Header = () => {
+    function scrollToTop() {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 0);
+    }
+
     return (
         <header className="header">
-            <Link to="/"><img className="header__logo" src={logo} alt="logo"/></Link>
+            <Link onClick={scrollToTop} to="/"><img className="header__logo" src={logo} alt="logo"/></Link>
         </header>
     );
 };

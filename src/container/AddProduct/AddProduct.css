@@ -26,6 +26,11 @@
     margin: 32px 0 72px 0;
 }
 
+.content__img-img {
+    width: 100% !important;
+    padding: 36px;
+}
+
 
 @keyframes rollIn {
     0% {
@@ -49,5 +54,9 @@
     .add-product__content {
         display: flex;
         flex-direction: column;
+    }
+
+    .content__img {
+        order: 2;
     }
 }

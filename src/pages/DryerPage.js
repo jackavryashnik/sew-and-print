@@ -4,7 +4,7 @@ import { ProductsList } from "../components/ProductsList/ProductsList"
 export const DryerPage = () => {
   return (
     <>
-    <ProductsList category="machinery" product="dryer" sectionTitle="Сушка для DTF трансферів"/>
+    <ProductsList category="machinery" catalog="dryer" sectionTitle="Сушка для DTF трансферів"/>
     </>
   )
 }

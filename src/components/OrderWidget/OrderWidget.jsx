@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Timer } from "../../components";
+// import orderLogo from "../../assets/orderLogo";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import "./BottomOrderWidget.css";
+import "./OrderWidget.css";
 
-const OrderWidget = () => {
-    const [selectedPayment, setSelectedPayment] = useState("novaposhta");
+const OrderWidget = ({ productInfo }) => {
+    // const [selectedPayment, setSelectedPayment] = useState("novaposhta");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [valid, setValid] = useState(true);
 
-    const handlePaymentChange = (event) => {
-        setSelectedPayment(event.target.value);
-    };
+    // const handlePaymentChange = (event) => {
+    //     setSelectedPayment(event.target.value);
+    // };
 
     const handleChange = (value) => {
         setPhoneNumber(value);
@@ -44,33 +44,29 @@ const OrderWidget = () => {
     return (
         <div className="bottom-widget-wrapper" id="order-bottom">
             <div className="bottom-order-widget flex__center">
-                <Timer />
-
                 <div className="offer">
-                    <div className="offer__image">
-                        <img
-                            // src={images.grapePlusGuasha}
-                            height="180"
-                            alt="Шкребок Гуаша"
-                        />
-                    </div>
                     <div className="offer__subtitle">
-                        <span className="offer__subtitle-text">
-                            Шкребок Гуаша
-                        </span>
-                        <span className="plus">+</span>
-                        <span className="offer__subtitle-text">
-                            {/* {subtitle} */}
-                        </span>
+                        <h4 className="offer__subtitle-text">
+                            {productInfo.title}
+                        </h4>
                     </div>
                 </div>
 
                 <div className="price">
-                    <div className="price__old">
+                    <div className="price__new">
+                        <p>
+                            <span className="price__title">Ціна:</span>
+                            <span className="price__value">
+                                {productInfo.price}
+                            </span>
+                            <small className="price__currency">грн.</small>
+                        </p>
+                    </div>
+                    {/* <div className="price__old">
                         <span className="price__title">Звичайна ціна:</span>
                         <p>
                             <span className="price__value">
-                                {/* {oldPrice} */}
+                                {oldPrice}
                             </span>
                             <small className="price__currency">грн.</small>
                         </p>
@@ -79,11 +75,11 @@ const OrderWidget = () => {
                         <span className="price__title">Ціна сьогодні:</span>
                         <p>
                             <span className="price__value">
-                            {/* {newPrice} */}
+                            {newPrice}
                             </span>
                             <small className="price__currency">грн.</small>
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="inputs">
@@ -93,6 +89,14 @@ const OrderWidget = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Введіть ім'я"
+                                required={true}
+                            />
+                        </div>
+                        <div className="input__email">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Введіть email"
                             />
                         </div>
                         <div className="input__phone-number">
@@ -110,8 +114,8 @@ const OrderWidget = () => {
                         </div>
                     </form>
 
-                    <div className="payment">
-                        <b className="payment__title">Оберіть спосіб оплати:</b>
+                    {/* <div className="payment">
+                        <b className="payment__title">Оберіть спосіб отримання:</b>
                         <div className="block-col payment_selector_field">
                             <label
                                 className={`custom-radio ${
@@ -129,12 +133,36 @@ const OrderWidget = () => {
                                 />
                                 <i className="fa-solid fa-check payment_selector checkmark"></i>
                                 <img
-                                    // src={images.novaPoshta}
+                                    src={orderLogo.novaPoshta}
                                     width="22"
                                     alt="Novaposhta Icon"
                                 />
                                 <span className="payment_title">
                                     Накладний платіж
+                                </span>
+                            </label>
+                            <label
+                                className={`custom-radio ${
+                                    selectedPayment === "selfDelivery"
+                                        ? "selected"
+                                        : ""
+                                }`}
+                            >
+                                <input
+                                    type="radio"
+                                    name="payment"
+                                    value="selfDelivery"
+                                    checked={selectedPayment === "selfDelivery"}
+                                    onChange={handlePaymentChange}
+                                />
+                                <i className="fa-solid fa-check payment_selector checkmark"></i>
+                                <img
+                                    src={orderLogo.delivery}
+                                    width="22"
+                                    alt="SelfDelivery Icon"
+                                />
+                                <span className="payment_title">
+                                    Самовивіз
                                 </span>
                             </label>
                             <label
@@ -153,7 +181,7 @@ const OrderWidget = () => {
                                 />
                                 <i className="fa-solid fa-check payment_selector checkmark"></i>
                                 <img
-                                    // src={images.wayForPay}
+                                    src={orderLogo.wayForPay}
                                     width="22"
                                     alt="WayForPay Icon"
                                 />
@@ -162,21 +190,13 @@ const OrderWidget = () => {
                                 </span>
                             </label>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="order__button btn-pulse">
                         Замовити зараз
                     </div>
                 </div>
 
-                <b className="lastpack__wrapper">
-                    Залишилось всього{" "}
-                    <span className="lastpack">
-                        <span className="lastpack_value">
-                            {/* {amount} шт. */}
-                        </span>
-                    </span>{" "}
-                    по акції
-                </b>
+                {/* <b className="lastpack__wrapper">Залишилось всього{" "}<span className="lastpack"><span className="lastpack_value">{amount} шт.</span></span>{" "}по акції</b> */}
             </div>
         </div>
     );

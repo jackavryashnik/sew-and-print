@@ -41,7 +41,7 @@ const HowToOrder = () => {
                     image={<i className="fa-solid fa-money-bills"></i>}
                     alt={"money icon"}
                     step={"крок 4"}
-                    deliveryText={"Ви оплачуєте замовлення при отриманні або онлайн"}
+                    deliveryText={"Ви оплачуєте замовлення при отриманні товару"}
                 />
             </div>
         </div>

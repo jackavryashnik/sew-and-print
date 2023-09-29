@@ -7,23 +7,28 @@ import {
     MainScreen,
     Prints,
     ProductionProcess,
-    // OrderScreen,
+    EaseSteps,
+    OrderScreen,
+    AboutUs,
 } from "../container";
-import { TopLine, Footer } from "../components";
+import { Merch, Achievements, TopLine } from "../components";
 
 
 export const  HomePage = () => {
     return (
         <div className="App">
             <MainScreen/>
-            <TopLine />
+            <Achievements />
+            <EaseSteps />
             <Printers/>
             <Prints />
+            <Merch />
+            <TopLine/>
             <AddProduct/>
-            <ProductionProcess />
             <HowToOrder />
-            {/* <OrderScreen/> */}
-            <Footer />
+            <ProductionProcess />
+            <AboutUs />
+            <OrderScreen />
         </div>
     );
 }

@@ -5,6 +5,8 @@ import MainScreen from "./MainScreen/MainScreen";
 import OrderScreen from "./OrderScreen/OrderScreen";
 import Prints from "./Prints/Prints";
 import ProductionProcess from "./ProductionProcess/ProductionProcess";
+import EaseSteps from "./EaseSteps/EaseSteps";
+import AboutUs from "./AboutUs/AboutUs";
 
 export {
     AddProduct,
@@ -14,4 +16,6 @@ export {
     OrderScreen,
     Prints,
     ProductionProcess,
+    EaseSteps,
+    AboutUs,
 };

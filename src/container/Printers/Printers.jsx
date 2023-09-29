@@ -5,13 +5,19 @@ import { SectionTitle } from "../../components";
 import printers from "../../assets/printers";
 import "./Printers.css";
 
-const Introdaction = () => {
+const Printers = () => {
     const { industrialPrinter, smallPrinter } = printers;
 
     const { ref, inView } = useInView({
         threshold: 0,
         triggerOnce: true,
     });
+
+    function scrollToTop() {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+          }, 0);
+      }
 
     return (
         <div className="printers" id="printers">
@@ -27,7 +33,6 @@ const Introdaction = () => {
                     />
                 </div>
                 
-
                 <section className="product-description">
                     <h2 className="product-description__subtitle">
                         В нас є великий ассортимент печатної техніки, від маленьких DTF принтерів до обладнання промислового рівня
@@ -39,7 +44,7 @@ const Introdaction = () => {
                             Маленькі DTF принтери - це ідеальний вибір для тих, хто починає свій шлях у світі цифрового текстильного друку. Вони компактні, легкі у використанні та забезпечують високу якість друку на текстилі. Ці принтери чудово підходять для невеликих обсягів виробництва та надають можливість надрукувати власні дизайни на футболках, кепках та інших текстильних виробах вдома або в маленькому бізнесі.
                         </p>
                         <div className="products__catalog">
-                            <Link to="/machinery">
+                            <Link onClick={scrollToTop} to="/machinery">
                                 <button className="button">Каталог</button>
                             </Link>
                         </div>
@@ -69,4 +74,4 @@ const Introdaction = () => {
     );
 };
 
-export default Introdaction;
+export default Printers

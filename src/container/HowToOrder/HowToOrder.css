@@ -5,6 +5,10 @@
 .order__items {
     display: flex;
     justify-content: space-evenly;
+    margin: 36px 0;
+    padding: 0 16px;
+    gap: 15px;
+    max-width: 100vw;
 }
 
 .order__items-active {

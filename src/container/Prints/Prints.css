@@ -17,7 +17,7 @@
 }
 
 .prints__content .content__img-img {
-    width: 700px;
+    width: 100% !important;
 }
 
 .rollIn {
@@ -71,5 +71,9 @@
     .content__text {
         width: 100% !important;
         margin: 16px 0 !important;
+    }
+
+    .content__img-img {
+        width: 100% !important;
     }
 }

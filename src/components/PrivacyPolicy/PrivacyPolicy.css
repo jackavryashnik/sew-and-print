@@ -20,6 +20,7 @@
     max-height: 80vh;
     max-width: 80vw;
     background-color: var(--color-white);
+    color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
 }
