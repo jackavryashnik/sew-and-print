@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4e66316e.css",
-    "main.js": "/static/js/main.6a501505.js",
+    "main.js": "/static/js/main.a00f0e92.js",
     "static/media/printing-department.jpg": "/static/media/printing-department.0faae5ffc9ad22f9c0b2.jpg",
     "static/media/condiments.png": "/static/media/condiments.35a868033c5b96c8c107.png",
     "static/media/dtf-printer.png": "/static/media/dtf-printer.e9d760f206690aeef9c2.png",
@@ -213,10 +213,10 @@
     "static/media/3630820390_w640_h640_3630820390.webp": "/static/media/3630820390_w640_h640_3630820390.acede82b982d213f0076.webp",
     "index.html": "/index.html",
     "main.4e66316e.css.map": "/static/css/main.4e66316e.css.map",
-    "main.6a501505.js.map": "/static/js/main.6a501505.js.map"
+    "main.a00f0e92.js.map": "/static/js/main.a00f0e92.js.map"
   },
   "entrypoints": [
     "static/css/main.4e66316e.css",
-    "static/js/main.6a501505.js"
+    "static/js/main.a00f0e92.js"
   ]
 }
