@@ -10,6 +10,7 @@ import {
     EaseSteps,
     OrderScreen,
     AboutUs,
+    PrintDesign,
 } from "../container";
 import { Merch, Achievements, TopLine } from "../components";
 
@@ -22,6 +23,7 @@ export const  HomePage = () => {
             <EaseSteps />
             <Printers/>
             <Prints />
+            <PrintDesign/>
             <Merch />
             <TopLine/>
             <AddProduct/>

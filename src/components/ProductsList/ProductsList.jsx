@@ -2,10 +2,12 @@ import React from 'react';
 import { Card, List, Image } from 'antd';
 import { Link } from 'react-router-dom';
 import { SectionTitle } from '../../components';
-import products from '../../constants/products';
+import products from '../../constants/products.json';
+// import FetchedProducts from '../../constants/FetchedProducts'
 import './ProductsList.css';
 
 export const ProductsList = ({ category, catalog, product, sectionTitle }) => {
+  // const { products } = FetchedProducts();
   if (!products[category]) {
     return <List />;
   }

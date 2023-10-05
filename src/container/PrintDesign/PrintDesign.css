@@ -1,0 +1,31 @@
+.print-design {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 0 90px;
+    background-color: var(--color-light-gray);
+}
+
+.print-design__title {
+    justify-content: center;
+    font-weight: normal;
+    font-size: 2rem;
+    padding: 4rem 1rem;
+    line-height: 1.25;
+}
+
+.print-design__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+    .print-design {
+        padding: 50px 0;
+    }
+}

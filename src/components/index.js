@@ -10,7 +10,7 @@ import Timer from "./Timer/Timer";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 import Merch from "./Merch/Merch";
 import Achievements from "./Achievements/Achievements";
-
+import PrintDesignItem from "./PrintDesignItem/PrintDesignItem";
 
 export {
     Footer,
@@ -25,4 +25,5 @@ export {
     PrivacyPolicy,
     Merch,
     Achievements,
+    PrintDesignItem,
 };

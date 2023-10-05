@@ -7,6 +7,7 @@ import Prints from "./Prints/Prints";
 import ProductionProcess from "./ProductionProcess/ProductionProcess";
 import EaseSteps from "./EaseSteps/EaseSteps";
 import AboutUs from "./AboutUs/AboutUs";
+import PrintDesign from "./PrintDesign/PrintDesign";
 
 export {
     AddProduct,
@@ -18,4 +19,5 @@ export {
     ProductionProcess,
     EaseSteps,
     AboutUs,
+    PrintDesign,
 };

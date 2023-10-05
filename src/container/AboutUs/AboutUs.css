@@ -83,8 +83,13 @@
 }
 
 @media screen and (max-width: 970px) {
+    .about {
+        padding: 50px 0;
+    }
+
     .about__content {
         margin: 0;
+        width: 100%;
     }
     .about__subtitle {
         font-size: 32px;
@@ -97,6 +102,10 @@
     .about__points,
     .about__logo {
         width: 100%;
+    }
+
+    .about__logo {
+        margin: 20px 0;
     }
 
     .about__point p {

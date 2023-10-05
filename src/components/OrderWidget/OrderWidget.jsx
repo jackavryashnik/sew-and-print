@@ -1,68 +1,101 @@
 import React, { useState } from "react";
+import { Alert } from "antd";
+import axios from "axios";
 // import orderLogo from "../../assets/orderLogo";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./OrderWidget.css";
 
 const OrderWidget = ({ productInfo }) => {
-    // const [selectedPayment, setSelectedPayment] = useState("novaposhta");
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [valid, setValid] = useState(true);
+  // const [selectedPayment, setSelectedPayment] = useState("novaposhta");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [valid, setValid] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-    // const handlePaymentChange = (event) => {
-    //     setSelectedPayment(event.target.value);
-    // };
+  // const handlePaymentChange = (event) => {
+  //     setSelectedPayment(event.target.value);
+  // };
 
-    const handleChange = (value) => {
-        setPhoneNumber(value);
-        setValid(validatePhoneNumber(value));
-    };
+  const handleChange = (value) => {
+    setPhoneNumber(value);
+    setValid(validatePhoneNumber(value));
+  };
 
-    const validatePhoneNumber = (phoneNumber) => {
-        const phoneNumberPattern = /^\+?[1-9]\d{1,14}$/;
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneNumberPattern = /^\+?[1-9]\d{1,14}$/;
 
-        return phoneNumberPattern.test(phoneNumber);
-    };
+    return phoneNumberPattern.test(phoneNumber);
+  };
 
-    const items = document.querySelectorAll(".animation-rotate");
+  const items = document.querySelectorAll(".animation-rotate");
 
-    function handleScroll() {
-        for (const item of items) {
-            const rect = item.getBoundingClientRect();
-            const isVisible =
-                rect.top >= 0 && rect.bottom <= window.innerHeight;
+  function handleScroll() {
+    for (const item of items) {
+      const rect = item.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
-            if (isVisible && !item.classList.contains("appear")) {
-                item.classList.add("appear");
-            }
-        }
+      if (isVisible && !item.classList.contains("appear")) {
+        item.classList.add("appear");
+      }
     }
+  }
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
 
-    return (
-        <div className="bottom-widget-wrapper" id="order-bottom">
-            <div className="bottom-order-widget flex__center">
-                <div className="offer">
-                    <div className="offer__subtitle">
-                        <h4 className="offer__subtitle-text">
-                            {productInfo.title}
-                        </h4>
-                    </div>
-                </div>
+  const tgBot = async (e) => {
+    e.preventDefault();
 
-                <div className="price">
-                    <div className="price__new">
-                        <p>
-                            <span className="price__title">Ціна:</span>
-                            <span className="price__value">
-                                {productInfo.price}
-                            </span>
-                            <small className="price__currency">грн.</small>
-                        </p>
-                    </div>
-                    {/* <div className="price__old">
+    const TOKEN = "token";
+    const CHAT_ID = "id";
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    const success = document.getElementById("success");
+
+    try {
+      let tgNotification = `<b>Заявка з сайту!</b>\n`;
+      tgNotification += `<b>Замовник: </b> ${name}\n`;
+      tgNotification += `<b>Товар: </b> ${productInfo.title}\n`;
+      tgNotification += `<b>Пошта: </b> ${email}\n`;
+      tgNotification += `<b>Телефон: </b> +${phoneNumber}\n`;
+      tgNotification += `<b>Коментар: </b> ${message}`;
+
+      await axios.post(URI_API, {
+        chat_id: CHAT_ID,
+        text: tgNotification,
+        parse_mode: "html",
+      });
+      setName("");
+      setEmail("");
+      setPhoneNumber("380");
+      setMessage("");
+      success.style.display = "block";
+    } catch (error) {
+      console.error(error);
+    } finally {
+      console.log("Замовлення успішно відправлено!");
+    }
+  };
+
+  return (
+    <div className="bottom-widget-wrapper" id="order-bottom">
+      <div className="bottom-order-widget flex__center">
+        <div className="offer">
+          <div className="offer__subtitle">
+            <h4 className="offer__subtitle-text">{productInfo.title}</h4>
+          </div>
+        </div>
+
+        <div className="price">
+          <div className="price__new">
+            <p>
+              <span className="price__title">Ціна:</span>
+              <span className="price__value">{productInfo.price}</span>
+              <small className="price__currency">грн.</small>
+            </p>
+          </div>
+          {/* <div className="price__old">
                         <span className="price__title">Звичайна ціна:</span>
                         <p>
                             <span className="price__value">
@@ -80,41 +113,68 @@ const OrderWidget = ({ productInfo }) => {
                             <small className="price__currency">грн.</small>
                         </p>
                     </div> */}
-                </div>
+        </div>
 
-                <div className="inputs">
-                    <form className="input-form">
-                        <div className="input__name">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Введіть ім'я"
-                                required={true}
-                            />
-                        </div>
-                        <div className="input__email">
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Введіть email"
-                            />
-                        </div>
-                        <div className="input__phone-number">
-                            <PhoneInput
-                                country={"ua"}
-                                value={phoneNumber}
-                                onChange={handleChange}
-                                inputProps={{
-                                    required: true,
-                                }}
-                            />
-                            {!valid && (
-                                <p>Please enter a valid phone number.</p>
-                            )}
-                        </div>
-                    </form>
+        <div className="inputs">
+          <form className="input-form" onSubmit={tgBot}>
+            <div className="input__name">
+              <input
+                type="text"
+                name="name"
+                placeholder="Введіть ім'я"
+                required={true}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="input__email">
+              <input
+                type="email"
+                name="email"
+                placeholder="Введіть email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className="input__phone-number">
+              <PhoneInput
+                country={"ua"}
+                name="tel"
+                value={phoneNumber}
+                onChange={handleChange}
+                inputProps={{
+                  required: true,
+                }}
+              />
+              {!valid && <p>Будь-ласка введіть правильний номер телефона.</p>}
+            </div>
+            <div className="input__message">
+              <textarea
+                name="message"
+                placeholder="Комментар"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+            </div>
 
-                    {/* <div className="payment">
+            <div id="success">
+              <Alert
+                message="Замовлення надіслано успішно!"
+                type="success"
+                showIcon
+              />
+            </div>
+
+            <button
+              type="submit"
+              id="submit-btn"
+              className="order__button btn-pulse"
+            >
+              Замовити зараз
+            </button>
+          </form>
+
+          {/* <div className="payment">
                         <b className="payment__title">Оберіть спосіб отримання:</b>
                         <div className="block-col payment_selector_field">
                             <label
@@ -191,15 +251,12 @@ const OrderWidget = ({ productInfo }) => {
                             </label>
                         </div>
                     </div> */}
-                    <div className="order__button btn-pulse">
-                        Замовити зараз
-                    </div>
-                </div>
-
-                {/* <b className="lastpack__wrapper">Залишилось всього{" "}<span className="lastpack"><span className="lastpack_value">{amount} шт.</span></span>{" "}по акції</b> */}
-            </div>
         </div>
-    );
+
+        {/* <b className="lastpack__wrapper">Залишилось всього{" "}<span className="lastpack"><span className="lastpack_value">{amount} шт.</span></span>{" "}по акції</b> */}
+      </div>
+    </div>
+  );
 };
 
 export default OrderWidget;

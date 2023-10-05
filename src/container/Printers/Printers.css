@@ -74,6 +74,11 @@
     }
 }
 
+
+.hiden-btn {
+    display: none;
+}
+
 @media screen and (min-width: 2000px) {
     .introduction__product {
         width: 80%;
@@ -92,7 +97,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .printers__industrial,
     .printers__small {
         display: flex;
@@ -118,4 +123,7 @@
     .product__img-img {
         width: 300px;
     }
+    .hiden-btn {
+        display: flex;
+    }    
 }
