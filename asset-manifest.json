@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sew-and-print/static/css/main.1a0056a3.css",
+    "main.js": "/sew-and-print/static/js/main.14a0fa4a.js",
+    "static/media/printing-department.jpg": "/sew-and-print/static/media/printing-department.0faae5ffc9ad22f9c0b2.jpg",
+    "static/media/condiments.png": "/sew-and-print/static/media/condiments.35a868033c5b96c8c107.png",
+    "static/media/dtf-printer.png": "/sew-and-print/static/media/dtf-printer.e9d760f206690aeef9c2.png",
+    "static/media/small.png": "/sew-and-print/static/media/small.440d21f4babf2c4fc1c1.png",
+    "static/media/industrial.png": "/sew-and-print/static/media/industrial.c341ba1b6db8dfb6921b.png",
+    "static/media/1.jpg": "/sew-and-print/static/media/1.a6ae26f986c876f3b8ae.jpg",
+    "static/media/merch.jpg": "/sew-and-print/static/media/merch.9cd1a2665943f06ce5eb.jpg",
+    "static/media/2.jpg": "/sew-and-print/static/media/2.e767da2bcd09dfa6671f.jpg",
+    "static/media/3.jpg": "/sew-and-print/static/media/3.e8eccc8727d62bb38ec9.jpg",
+    "static/media/logo.png": "/sew-and-print/static/media/logo.4616b7809ebf903e421f.png",
+    "static/media/diamond.png": "/sew-and-print/static/media/diamond.282a138d0a4aca50dabd.png",
+    "static/media/pallete.png": "/sew-and-print/static/media/pallete.4286b4ba4815b18b5a31.png",
+    "index.html": "/sew-and-print/index.html",
+    "main.1a0056a3.css.map": "/sew-and-print/static/css/main.1a0056a3.css.map",
+    "main.14a0fa4a.js.map": "/sew-and-print/static/js/main.14a0fa4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a0056a3.css",
+    "static/js/main.14a0fa4a.js"
+  ]
+}
