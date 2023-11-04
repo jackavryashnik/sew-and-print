@@ -41,8 +41,8 @@ const OrderScreenWidget = () => {
   const tgBot = async (e) => {
     e.preventDefault();
 
-    const TOKEN = "token";
-    const CHAT_ID = "id";
+    const TOKEN = "6586691947:AAGFAkEgqhiDmFHREDHw1vKmRvUMbJVeX2o";
+    const CHAT_ID = "-1001881829689";
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     const success = document.getElementById("success");
 
