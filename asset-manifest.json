@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sew-and-print/static/css/main.1a0056a3.css",
-    "main.js": "/sew-and-print/static/js/main.14a0fa4a.js",
+    "main.js": "/sew-and-print/static/js/main.f9f0c506.js",
     "static/media/printing-department.jpg": "/sew-and-print/static/media/printing-department.0faae5ffc9ad22f9c0b2.jpg",
     "static/media/condiments.png": "/sew-and-print/static/media/condiments.35a868033c5b96c8c107.png",
     "static/media/dtf-printer.png": "/sew-and-print/static/media/dtf-printer.e9d760f206690aeef9c2.png",
@@ -16,10 +16,10 @@
     "static/media/pallete.png": "/sew-and-print/static/media/pallete.4286b4ba4815b18b5a31.png",
     "index.html": "/sew-and-print/index.html",
     "main.1a0056a3.css.map": "/sew-and-print/static/css/main.1a0056a3.css.map",
-    "main.14a0fa4a.js.map": "/sew-and-print/static/js/main.14a0fa4a.js.map"
+    "main.f9f0c506.js.map": "/sew-and-print/static/js/main.f9f0c506.js.map"
   },
   "entrypoints": [
     "static/css/main.1a0056a3.css",
-    "static/js/main.14a0fa4a.js"
+    "static/js/main.f9f0c506.js"
   ]
 }
