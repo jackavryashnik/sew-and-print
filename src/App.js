@@ -28,7 +28,7 @@ function App() {
             <BrowserRouter>
                 <Header />
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="sew-and-print/" element={<HomePage />} />
                     <Route path="machinery/shaker" element={<ShakerPage />} />
                     <Route path="machinery/printer_plus_shaker" element={<PrinterShakerPage />} />
                     <Route path="machinery/dryer" element={<DryerPage />} />

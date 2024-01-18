@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <Link onClick={scrollToTop} to="/"><img className="header__logo" src={logo} alt="logo"/></Link>
+            <Link onClick={scrollToTop} to="sew-and-print/"><img className="header__logo" src={logo} alt="logo"/></Link>
         </header>
     );
 };
