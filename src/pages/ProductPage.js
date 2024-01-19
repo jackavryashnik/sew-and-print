@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 // import FetchedProducts from '../constants/FetchedProducts'
-import products from '../constants/products.json';
+import products from '../constants/products.js';
 import { useParams } from 'react-router-dom';
 import { OrderWidget, SectionTitle } from '../components';
 import { Image } from 'antd';

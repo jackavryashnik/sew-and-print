@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, List, Image } from 'antd';
 import { Link } from 'react-router-dom';
 import { SectionTitle } from '../../components';
-import products from '../../constants/products.json';
+import products from '../../constants/products.js';
 // import FetchedProducts from '../../constants/FetchedProducts'
 import './ProductsList.css';
 
